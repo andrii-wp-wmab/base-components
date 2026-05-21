@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+
+            //buttons
+            <a href="" class="btn-main" target="_blank" rel="nofollow">Button</a>
+            //button main small
+            <a href="" class="btn-main btn-sm" target="_blank" rel="nofollow">Button</a>
+            //button main medium
+            <a href="" class="btn-main btn-md" target="_blank" rel="nofollow">Button</a>
+            //button main large
+            <a href="" class="btn-main btn-lg" target="_blank" rel="nofollow">Button</a>
+            //button main disabled
+            <a href="" class="btn-main btn-disabled" target="_blank" rel="nofollow">Button</a>
+            //button main loading
+            <!-- <a href="" class="btn-main btn-loading" target="_blank" rel="nofollow">Button</a> -->
+
+            //button provider (default)
+            <button type="button" class="btn-provider">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.805 10.023H12v3.955h5.617c-.242 1.29-0.977 2.383-2.082 3.117v2.59h3.371c1.973-1.816 3.109-4.492 3.109-7.668 0-.527-.047-1.039-.133-1.52-.023.004.008-.008-.077.008v-.482z" fill="#4285F4"/>
+                    <path d="M12 22c2.813 0 5.172-.934 6.895-2.535l-3.371-2.59c-.934.625-2.129.996-3.523.996-2.711 0-5.004-1.828-5.824-4.289H2.691v2.672C4.406 19.652 7.969 22 12 22z" fill="#34A853"/>
+                    <path d="M6.176 13.582A5.97 5.97 0 0 1 5.836 12c0-.551.098-1.086.34-1.582V7.746H2.691A9.988 9.988 0 0 0 2 12c0 1.621.387 3.152 1.074 4.512l3.102-2.93z" fill="#FBBC05"/>
+                    <path d="M12 6.129c1.527 0 2.895.524 3.973 1.555l2.98-2.98C17.168 3.031 14.813 2 12 2 7.969 2 4.406 4.348 2.691 7.746l3.485 2.672C6.996 7.957 9.289 6.129 12 6.129z" fill="#EA4335"/>
+                </svg>
+                Sign in with Google
+            </button>
+            //button provider disabled
+            <button type="button" class="btn-provider btn-disabled" disabled>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.805 10.023H12v3.955h5.617c-.242 1.29-0.977 2.383-2.082 3.117v2.59h3.371c1.973-1.816 3.109-4.492 3.109-7.668 0-.527-.047-1.039-.133-1.52-.023.004.008-.008-.077.008v-.482z" fill="#4285F4"/>
+                    <path d="M12 22c2.813 0 5.172-.934 6.895-2.535l-3.371-2.59c-.934.625-2.129.996-3.523.996-2.711 0-5.004-1.828-5.824-4.289H2.691v2.672C4.406 19.652 7.969 22 12 22z" fill="#34A853"/>
+                    <path d="M6.176 13.582A5.97 5.97 0 0 1 5.836 12c0-.551.098-1.086.34-1.582V7.746H2.691A9.988 9.988 0 0 0 2 12c0 1.621.387 3.152 1.074 4.512l3.102-2.93z" fill="#FBBC05"/>
+                    <path d="M12 6.129c1.527 0 2.895.524 3.973 1.555l2.98-2.98C17.168 3.031 14.813 2 12 2 7.969 2 4.406 4.348 2.691 7.746l3.485 2.672C6.996 7.957 9.289 6.129 12 6.129z" fill="#EA4335"/>
+                </svg>
+                Sign in with Google
+            </button>
+
+            //input default
+            <div class="input-wrap">
+                <input type="text" id="input-name" class="input-field" placeholder=" " />
+                <label for="input-name" class="input-label">Input placeholder</label>
+            </div>
+            //input filled (has value)
+            <div class="input-wrap">
+                <input type="text" id="input-filled" class="input-field" placeholder=" " value="placeholder12" />
+                <label for="input-filled" class="input-label">Input placeholder</label>
+            </div>
+            //input error — empty (type 1)
+            <div class="input-wrap input-error">
+                <input type="text" id="input-error-1" class="input-field" placeholder=" " />
+                <label for="input-error-1" class="input-label">Input placeholder</label>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //input error — filled (type 2)
+            <div class="input-wrap input-error">
+                <input type="text" id="input-error-2" class="input-field" placeholder=" " value="placeholder12" />
+                <label for="input-error-2" class="input-label">Input placeholder</label>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //input disabled
+            <div class="input-wrap">
+                <input type="text" id="input-disabled" class="input-field" placeholder=" " value="placeholder12" disabled />
+                <label for="input-disabled" class="input-label">Input placeholder</label>
+            </div>
+
+            //input password default
+            <div class="input-wrap input-password">
+                <input type="password" id="input-pass" class="input-field" placeholder=" " />
+                <label for="input-pass" class="input-label">Password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password">
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-eye-hide" viewBox="0 0 20 17.274" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.761 10.8672C7.186 10.2932 6.836 9.5132 6.836 8.6382C6.836 6.8852 8.248 5.4722 10 5.4722C10.867 5.4722 11.665 5.8232 12.23 6.3972" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.1052 9.1993C12.8732 10.4893 11.8572 11.5073 10.5682 11.7413" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.655 13.9727C3.068 12.7267 1.724 10.9067 0.75 8.6377C1.734 6.3587 3.087 4.5287 4.684 3.2727C6.271 2.0167 8.102 1.3347 10 1.3347C11.909 1.3347 13.739 2.0267 15.336 3.2917" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.448 5.4912C18.136 6.4052 18.741 7.4602 19.25 8.6372C17.283 13.1942 13.807 15.9392 10 15.9392C9.137 15.9392 8.286 15.7992 7.468 15.5262" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.8874 0.75L2.1134 16.524" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            //input password error — empty (type 1)
+            <div class="input-wrap input-password input-error">
+                <input type="password" id="input-pass-error-1" class="input-field" placeholder=" " />
+                <label for="input-pass-error-1" class="input-label">Password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password">
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-eye-hide" viewBox="0 0 20 17.274" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.761 10.8672C7.186 10.2932 6.836 9.5132 6.836 8.6382C6.836 6.8852 8.248 5.4722 10 5.4722C10.867 5.4722 11.665 5.8232 12.23 6.3972" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.1052 9.1993C12.8732 10.4893 11.8572 11.5073 10.5682 11.7413" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.655 13.9727C3.068 12.7267 1.724 10.9067 0.75 8.6377C1.734 6.3587 3.087 4.5287 4.684 3.2727C6.271 2.0167 8.102 1.3347 10 1.3347C11.909 1.3347 13.739 2.0267 15.336 3.2917" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.448 5.4912C18.136 6.4052 18.741 7.4602 19.25 8.6372C17.283 13.1942 13.807 15.9392 10 15.9392C9.137 15.9392 8.286 15.7992 7.468 15.5262" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.8874 0.75L2.1134 16.524" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //input password error — filled / passwords don't match (type 2 / similar)
+            <div class="input-wrap input-password input-error">
+                <input type="password" id="input-pass-error-2" class="input-field" placeholder=" " value="password" />
+                <label for="input-pass-error-2" class="input-label">Password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password">
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-eye-hide" viewBox="0 0 20 17.274" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.761 10.8672C7.186 10.2932 6.836 9.5132 6.836 8.6382C6.836 6.8852 8.248 5.4722 10 5.4722C10.867 5.4722 11.665 5.8232 12.23 6.3972" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.1052 9.1993C12.8732 10.4893 11.8572 11.5073 10.5682 11.7413" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.655 13.9727C3.068 12.7267 1.724 10.9067 0.75 8.6377C1.734 6.3587 3.087 4.5287 4.684 3.2727C6.271 2.0167 8.102 1.3347 10 1.3347C11.909 1.3347 13.739 2.0267 15.336 3.2917" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.448 5.4912C18.136 6.4052 18.741 7.4602 19.25 8.6372C17.283 13.1942 13.807 15.9392 10 15.9392C9.137 15.9392 8.286 15.7992 7.468 15.5262" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.8874 0.75L2.1134 16.524" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //input phone default (no country pre-selected — auto-detects from first 3 digits)
+            <div class="input-wrap input-phone">
+                <div class="phone-prefix">
+                    <div class="phone-country">
+                        <span class="phone-flag"></span>
+                        <span class="phone-dial"></span>
+                        <select class="phone-select" aria-label="Select country code">
+                            <option value="" data-flag="" selected>—</option>
+                            <option value="+1"   data-flag="🇺🇸">United States (+1)</option>
+                            <option value="+44"  data-flag="🇬🇧">United Kingdom (+44)</option>
+                            <option value="+49"  data-flag="🇩🇪">Germany (+49)</option>
+                            <option value="+33"  data-flag="🇫🇷">France (+33)</option>
+                            <option value="+34"  data-flag="🇪🇸">Spain (+34)</option>
+                            <option value="+39"  data-flag="🇮🇹">Italy (+39)</option>
+                            <option value="+31"  data-flag="🇳🇱">Netherlands (+31)</option>
+                            <option value="+48"  data-flag="🇵🇱">Poland (+48)</option>
+                            <option value="+380" data-flag="🇺🇦">Ukraine (+380)</option>
+                            <option value="+1"   data-flag="🇨🇦">Canada (+1)</option>
+                            <option value="+61"  data-flag="🇦🇺">Australia (+61)</option>
+                            <option value="+55"  data-flag="🇧🇷">Brazil (+55)</option>
+                            <option value="+91"  data-flag="🇮🇳">India (+91)</option>
+                            <option value="+86"  data-flag="🇨🇳">China (+86)</option>
+                        </select>
+                    </div>
+                    <div class="phone-divider"></div>
+                </div>
+                <input type="tel" id="input-phone" class="input-field" placeholder=" " />
+                <label for="input-phone" class="input-label">Phone number</label>
+            </div>
+            //input phone error — empty, no country detected (type 1)
+            <div class="input-wrap input-phone input-error">
+                <div class="phone-prefix">
+                    <div class="phone-country">
+                        <span class="phone-flag"></span>
+                        <span class="phone-dial"></span>
+                        <select class="phone-select" aria-label="Select country code">
+                            <option value="" data-flag="" selected>—</option>
+                            <option value="+1"   data-flag="🇺🇸">United States (+1)</option>
+                            <option value="+44"  data-flag="🇬🇧">United Kingdom (+44)</option>
+                            <option value="+380" data-flag="🇺🇦">Ukraine (+380)</option>
+                        </select>
+                    </div>
+                    <div class="phone-divider"></div>
+                </div>
+                <input type="tel" id="input-phone-error-1" class="input-field" placeholder=" " />
+                <label for="input-phone-error-1" class="input-label">Phone number</label>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //input phone error — country detected, invalid number (type 2)
+            <div class="input-wrap input-phone input-error phone-detected">
+                <div class="phone-prefix">
+                    <div class="phone-country">
+                        <span class="phone-flag">🇺🇸</span>
+                        <span class="phone-dial">+1</span>
+                        <select class="phone-select" aria-label="Select country code">
+                            <option value="" data-flag="">—</option>
+                            <option value="+1"   data-flag="🇺🇸" selected>United States (+1)</option>
+                            <option value="+44"  data-flag="🇬🇧">United Kingdom (+44)</option>
+                            <option value="+380" data-flag="🇺🇦">Ukraine (+380)</option>
+                        </select>
+                    </div>
+                    <div class="phone-divider"></div>
+                </div>
+                <input type="tel" id="input-phone-error-2" class="input-field" placeholder=" " value="389-111-333" />
+                <label for="input-phone-error-2" class="input-label">Phone number</label>
+                <span class="input-error-msg">Invalid phone number</span>
+            </div>
+
+            //textarea default
+            <div class="input-wrap input-textarea">
+                <textarea id="textarea-default" class="input-field" placeholder=" "></textarea>
+                <label for="textarea-default" class="input-label">Input placeholder</label>
+            </div>
+            //textarea filled
+            <div class="input-wrap input-textarea">
+                <textarea id="textarea-filled" class="input-field" placeholder=" ">placeholder12</textarea>
+                <label for="textarea-filled" class="input-label">Input placeholder</label>
+            </div>
+            //textarea error — empty (type 1)
+            <div class="input-wrap input-textarea input-error">
+                <textarea id="textarea-error-1" class="input-field" placeholder=" "></textarea>
+                <label for="textarea-error-1" class="input-label">Input placeholder</label>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //textarea error — filled (type 2)
+            <div class="input-wrap input-textarea input-error">
+                <textarea id="textarea-error-2" class="input-field" placeholder=" ">placeholder12</textarea>
+                <label for="textarea-error-2" class="input-label">Input placeholder</label>
+                <span class="input-error-msg">This field is required</span>
+            </div>
+            //textarea disabled
+            <div class="input-wrap input-textarea">
+                <textarea id="textarea-disabled" class="input-field" placeholder=" " disabled>placeholder12</textarea>
+                <label for="textarea-disabled" class="input-label">Input placeholder</label>
+            </div>
+
+            //input password disabled
+            <div class="input-wrap input-password">
+                <input type="password" id="input-pass-disabled" class="input-field" placeholder=" " value="password" disabled />
+                <label for="input-pass-disabled" class="input-label">Password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password" disabled>
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- ====== Checkbox ====== -->
+    <div style="padding: 40px 60px; max-width: 900px;">
+        <h2 style="font-family:Figtree,sans-serif;font-size:20px;font-weight:700;color:#2D4059;margin:0 0 32px;">Checkbox</h2>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+            //unchecked
+            <label class="checkbox-wrap">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //checked
+            <label class="checkbox-wrap">
+                <input type="checkbox" class="checkbox-input" checked />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //unchecked — no label
+            <label class="checkbox-wrap">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkbox-box"></span>
+            </label>
+
+            //checked — no label
+            <label class="checkbox-wrap">
+                <input type="checkbox" class="checkbox-input" checked />
+                <span class="checkbox-box"></span>
+            </label>
+
+            //disabled unchecked
+            <label class="checkbox-wrap checkbox-disabled">
+                <input type="checkbox" class="checkbox-input" disabled />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //disabled checked
+            <label class="checkbox-wrap checkbox-disabled">
+                <input type="checkbox" class="checkbox-input" disabled checked />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //filled unchecked
+            <label class="checkbox-wrap checkbox-filled">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //filled checked
+            <label class="checkbox-wrap checkbox-filled">
+                <input type="checkbox" class="checkbox-input" checked />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //large unchecked
+            <label class="checkbox-wrap checkbox-lg">
+                <input type="checkbox" class="checkbox-input" />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+            //large checked
+            <label class="checkbox-wrap checkbox-lg">
+                <input type="checkbox" class="checkbox-input" checked />
+                <span class="checkbox-box"></span>
+                <span class="checkbox-label">Label</span>
+            </label>
+
+        </div>
+    </div>
+
+    <!-- ====== Search Input ====== -->
+    <div style="padding: 40px 60px; max-width: 900px;">
+        <h2 style="font-family:Figtree,sans-serif;font-size:20px;font-weight:700;color:#2D4059;margin:0 0 32px;">Search Input</h2>
+        <div style="display:flex;flex-direction:column;gap:24px;max-width:327px;">
+
+            //default
+            <div class="input-wrap input-search">
+                <button type="button" class="search-submit" aria-label="Search">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <input type="search" class="input-field" placeholder="Search" />
+                <button type="button" class="search-clear" aria-label="Clear search">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            //has value (add .has-value to see clear button)
+            <div class="input-wrap input-search has-value">
+                <button type="button" class="search-submit" aria-label="Search">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <input type="search" class="input-field" placeholder="Search" value="warmy.app" />
+                <button type="button" class="search-clear" aria-label="Clear search">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ====== Validation demo ====== -->
+    <div style="padding: 40px 60px; max-width: 900px;">
+        <h2 style="font-family:Figtree,sans-serif;font-size:20px;font-weight:700;color:#2D4059;margin:0 0 32px;">Validation demo</h2>
+        <form id="demo-form" novalidate style="display:flex;flex-direction:column;gap:32px;max-width:380px;">
+
+            //required + email
+            <div class="input-wrap" data-validate="required|email" data-error-required="Email is required" data-error-email="Enter a valid email address">
+                <input type="email" id="val-email" class="input-field" placeholder=" " />
+                <label for="val-email" class="input-label">Email</label>
+            </div>
+
+            //required + min:8 (password)
+            <div class="input-wrap input-password" data-validate="required|min:8" data-error-required="Password is required" data-error-min="Minimum 8 characters">
+                <input type="password" id="val-pass" class="input-field" placeholder=" " />
+                <label for="val-pass" class="input-label">Password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password">
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-eye-hide" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.76404 4.12287C10.1667 4.04344 10.5795 4.00218 11.0005 4.00218C15.3775 4.00218 18.8225 7.35418 20.2505 9.00018C19.8825 9.41218 19.3205 9.99118 18.6085 10.5912M12.5745 12.5742C12.1385 12.9992 11.5435 13.2512 10.8875 13.2512C9.5045 13.2512 8.3785 12.1242 8.3785 10.7402C8.3785 10.0852 8.6295 9.49018 9.0555 9.05418" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.29807 5.29785C3.49507 6.45385 2.02807 8.11585 1.00007 9.99985C2.44507 12.7078 5.52307 15.9998 11.0001 15.9998C12.8891 15.9998 14.5491 15.5078 15.9651 14.7468M2.00007 1.99985L20.0001 19.9998" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            //required + match (confirm password)
+            <div class="input-wrap input-password" data-validate="required|match:#val-pass" data-error-required="Please confirm your password" data-error-match="Passwords do not match">
+                <input type="password" id="val-pass-confirm" class="input-field" placeholder=" " />
+                <label for="val-pass-confirm" class="input-label">Confirm password</label>
+                <button type="button" class="input-password-toggle" aria-label="Show password">
+                    <svg class="icon-eye-show" viewBox="0 0 20 16.104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1615 8.0522C13.1615 9.7982 11.7455 11.2132 9.9995 11.2132C8.2535 11.2132 6.8385 9.7982 6.8385 8.0522C6.8385 6.3052 8.2535 4.8902 9.9995 4.8902C11.7455 4.8902 13.1615 6.3052 13.1615 8.0522Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.998 15.354C13.806 15.354 17.289 12.616 19.25 8.052C17.289 3.488 13.806 0.75 9.998 0.75H10.002C6.194 0.75 2.711 3.488 0.75 8.052C2.711 12.616 6.194 15.354 10.002 15.354H9.998Z" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="icon-eye-hide" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.76404 4.12287C10.1667 4.04344 10.5795 4.00218 11.0005 4.00218C15.3775 4.00218 18.8225 7.35418 20.2505 9.00018C19.8825 9.41218 19.3205 9.99118 18.6085 10.5912M12.5745 12.5742C12.1385 12.9992 11.5435 13.2512 10.8875 13.2512C9.5045 13.2512 8.3785 12.1242 8.3785 10.7402C8.3785 10.0852 8.6295 9.49018 9.0555 9.05418" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.29807 5.29785C3.49507 6.45385 2.02807 8.11585 1.00007 9.99985C2.44507 12.7078 5.52307 15.9998 11.0001 15.9998C12.8891 15.9998 14.5491 15.5078 15.9651 14.7468M2.00007 1.99985L20.0001 19.9998" stroke="var(--stroke-0, #B4BAC1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            //required + phone
+            <div class="input-wrap input-phone" data-validate="required|phone" data-error-required="Phone number is required" data-error-phone="Enter a valid phone number">
+                <div class="phone-prefix">
+                    <div class="phone-country">
+                        <span class="phone-flag"></span>
+                        <span class="phone-dial"></span>
+                        <select class="phone-select" aria-label="Country code">
+                            <option value="" selected></option>
+                            <option value="+1"   data-flag="🇺🇸">🇺🇸 United States (+1)</option>
+                            <option value="+44"  data-flag="🇬🇧">🇬🇧 United Kingdom (+44)</option>
+                            <option value="+49"  data-flag="🇩🇪">🇩🇪 Germany (+49)</option>
+                            <option value="+33"  data-flag="🇫🇷">🇫🇷 France (+33)</option>
+                            <option value="+380" data-flag="🇺🇦">🇺🇦 Ukraine (+380)</option>
+                        </select>
+                    </div>
+                    <div class="phone-divider"></div>
+                </div>
+                <input type="tel" id="val-phone" class="input-field" placeholder=" " />
+                <label for="val-phone" class="input-label">Phone number</label>
+            </div>
+
+            <button type="submit" class="btn-main btn-md">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/components.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
+
