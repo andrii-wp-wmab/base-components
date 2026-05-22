@@ -12,6 +12,7 @@
     --input-stroke-inactive: #EAECEE;
     --input-stroke-active: #CCCCCC;
     --gray-600: #848C97;
+    --gray-300: #EAECEE;
     --error-color: #F53838;
 }
 .btn-main {
@@ -21,6 +22,7 @@
     gap: 8px;
     min-width: 80px;
     width: fit-content;
+    height: 40px;
     padding: 0 24px;
     border-radius: 6px;
     background: var(--primary-blue);
@@ -39,10 +41,14 @@
 .btn-main.btn-outline {
     border: 1px solid var(--primary-blue);
     color: #3978F2;
+    background: transparent;
 }
 .btn-main:hover,
 .btn-main.btn-outline:hover {
     box-shadow: 0 0 12px 0 rgba(57, 120, 242, 0.50);
+    background: var(--primary-blue);
+    color: #fff;
+    border-color: var(--blue-200);
 }
 .btn-main:focus,
 .btn-main:active,
@@ -50,12 +56,16 @@
 .btn-main.btn-outline:active {
     background: var(--blue-200);
     box-shadow: 0 0 12px 0 rgba(57, 120, 242, 0.50);
+    color: #fff;
 }
 .btn-main:disabled,
 .btn-main.btn-disabled,
 .btn-main.btn-outline:disabled,
 .btn-main.btn-outline.btn-disabled {
     background: var(--disable-button);
+    color: #fff;
+    box-shadow: unset;
+    cursor: not-allowed;
 }
 .btn-main img {
     width: 16px;
@@ -178,8 +188,8 @@
     width: fit-content;
     padding: 0 24px;
     border-radius: 8px;
-    border: 1px solid var(--input-stroke-inactive);
-    background: #fff;
+    background: transparent;
+    border: 1px solid var(--gray-300);
     color: var(--primary-dark-font);
     font-family: Figtree, sans-serif;
     font-size: 16px;
@@ -191,9 +201,11 @@
     transition: box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn-provider:hover {
-    box-shadow: 1px 2px 4.5px 0 rgba(204, 204, 204, 0.25);
+    background: #FFF;
+    box-shadow: 1px 2px 9px 0 rgba(204, 204, 204, 0.25);
 }
-.btn-provider:active {
+.btn-provider:active, 
+.btn-provider:focus {
     background: var(--primary-dark-font);
     color: #fff;
     box-shadow: 1px 2px 4.5px 0 rgba(132, 132, 132, 0.25);
@@ -207,6 +219,8 @@
     border-color: var(--disable-button);
     color: var(--disable-button);
     cursor: not-allowed;
+    box-shadow: unset;
+    background: transparent;
 }
 .btn-provider:disabled img,
 .btn-provider.btn-disabled img {
