@@ -1,0 +1,88 @@
+/* ================================================
+   Base Component: Button Main
+   Depends on: bc-vars
+   ================================================ */
+.btn-main,
+a.btn-main {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+    width: fit-content;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: var(--primary-blue);
+    color: #FFF;
+    text-align: center;
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.032px;
+    border: 1px solid transparent;
+    text-decoration: unset;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.btn-main.btn-outline,
+a.btn-main.btn-outline {
+    border: 1px solid var(--primary-blue);
+    color: #3978F2;
+    background: transparent;
+}
+.btn-main:hover,
+a.btn-main:hover,
+.btn-main.btn-outline:hover,
+a.btn-main.btn-outline:hover {
+    box-shadow: 0 0 12px 0 rgba(57, 120, 242, 0.50);
+    background: var(--primary-blue);
+    color: #fff;
+    border-color: var(--blue-200);
+}
+.btn-main:focus,
+a.btn-main:focus,
+.btn-main:active,
+a.btn-main:active,
+.btn-main.btn-outline:focus,
+a.btn-main.btn-outline:focus,
+.btn-main.btn-outline:active,
+a.btn-main.btn-outline:active {
+    background: var(--blue-200);
+    box-shadow: 0 0 12px 0 rgba(57, 120, 242, 0.50);
+    color: #fff;
+}
+.btn-main:disabled,
+a.btn-main:disabled,
+.btn-main.btn-disabled,
+a.btn-main.btn-disabled,
+.btn-main.btn-outline:disabled,
+a.btn-main.btn-outline:disabled,
+.btn-main.btn-outline.btn-disabled,
+a.btn-main.btn-outline.btn-disabled {
+    background: var(--disable-button);
+    color: #fff;
+    box-shadow: unset;
+    cursor: not-allowed;
+}
+.btn-main img,
+a.btn-main img,
+.btn-main svg,
+a.btn-main svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+.btn-main.btn-sm,
+a.btn-main.btn-sm {
+    height: 40px;
+}
+.btn-main.btn-md,
+a.btn-main.btn-md {
+    height: 48px;
+}
+.btn-main.btn-lg,
+a.btn-main.btn-lg {
+    height: 58px;
+}

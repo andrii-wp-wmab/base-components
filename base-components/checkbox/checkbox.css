@@ -1,0 +1,98 @@
+/* ================================================
+   Base Component: Checkbox
+   Depends on: bc-vars
+   ================================================ */
+.checkbox-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.checkbox-wrap.checkbox-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+/* visually hidden native input — stays accessible/functional */
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+/* custom box */
+.checkbox-box {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    box-sizing: border-box;
+}
+/* filled variant: light bg instead of white */
+.checkbox-wrap.checkbox-filled .checkbox-box {
+    background-color: #F8FAFC;
+}
+/* hover — unchecked */
+.checkbox-wrap:hover .checkbox-box {
+    border-color: #94A3B8;
+}
+/* checked */
+.checkbox-input:checked + .checkbox-box {
+    background-color: #030712;
+    border-color: #030712;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M1 4L3.5 6.5L9 1.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 10px 8px;
+}
+/* hover — checked */
+.checkbox-wrap:hover .checkbox-input:checked + .checkbox-box {
+    background-color: #475569;
+    border-color: #475569;
+}
+/* focus ring via keyboard */
+.checkbox-input:focus-visible + .checkbox-box {
+    outline: 3px solid #030712;
+    outline-offset: 2px;
+}
+/* disabled — override all bg/border */
+.checkbox-wrap.checkbox-disabled .checkbox-box,
+.checkbox-input:disabled + .checkbox-box {
+    background-color: #E2E8F0 !important;
+    border-color: #CBD5E1 !important;
+}
+/* disabled checked: gray checkmark */
+.checkbox-wrap.checkbox-disabled .checkbox-input:checked + .checkbox-box,
+.checkbox-input:checked:disabled + .checkbox-box {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M1 4L3.5 6.5L9 1.5' stroke='%23475569' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+/* label text */
+.checkbox-label {
+    font-family: Figtree, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #334155;
+}
+/* large size */
+.checkbox-wrap.checkbox-lg .checkbox-box {
+    width: 21px;
+    height: 21px;
+}
+.checkbox-wrap.checkbox-lg .checkbox-input:checked + .checkbox-box {
+    background-size: 13px 10px;
+}
+.checkbox-wrap.checkbox-lg .checkbox-label {
+    font-size: 15.75px;
+    line-height: 24.5px;
+}

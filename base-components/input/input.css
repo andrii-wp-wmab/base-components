@@ -1,0 +1,263 @@
+/* ================================================
+   Base Component: Input
+   Depends on: bc-vars
+   ================================================ */
+.input-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 384px;
+}
+.input-wrap .input-field {
+    display: block;
+    width: 100%;
+    padding: 17px 20px;
+    border: 1px solid var(--input-stroke-inactive);
+    border-radius: 8px;
+    background: #fff;
+    font-family: Figtree, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--primary-dark-font);
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.input-wrap .input-label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 4px;
+    background: transparent;
+    font-family: Figtree, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--gray-600);
+    pointer-events: none;
+    transition: top 0.15s ease, font-size 0.15s ease, line-height 0.15s ease, background-color 0.15s ease;
+    white-space: nowrap;
+}
+/* hover */
+.input-wrap .input-field:hover {
+    border-color: var(--input-stroke-active);
+}
+/* focus */
+.input-wrap .input-field:focus {
+    border-color: var(--primary-dark-font);
+}
+/* floating label: focus or has value */
+.input-wrap .input-field:focus ~ .input-label,
+.input-wrap .input-field:not(:placeholder-shown) ~ .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    font-family: Figtree, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+}
+/* error */
+.input-wrap.input-error .input-field {
+    border-color: var(--error-color);
+}
+.input-wrap.input-error .input-field:focus ~ .input-label,
+.input-wrap.input-error .input-field:not(:placeholder-shown) ~ .input-label {
+    color: var(--error-color);
+}
+.input-error-msg {
+    position: absolute;
+    bottom: -9px;
+    left: 15px;
+    transform: translateY(50%);
+    background: #fff;
+    padding: 0 4px;
+    font-family: Figtree, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--error-color);
+    white-space: nowrap;
+    font-feature-settings: 'lnum' 1, 'tnum' 1;
+}
+/* disabled */
+.input-wrap .input-field:disabled {
+    color: var(--gray-600);
+    cursor: not-allowed;
+}
+
+/* ====== Password Input ====== */
+.input-wrap.input-password .input-field {
+    padding-right: 56px;
+    height: 58px;
+}
+.input-password-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    --stroke-0: #B4BAC1;
+}
+.input-password-toggle svg {
+    width: 20px;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+.input-wrap.input-password .input-field:focus ~ .input-password-toggle,
+.input-wrap.input-password .input-field:not(:placeholder-shown) ~ .input-password-toggle {
+    --stroke-0: var(--primary-dark-font);
+}
+.input-password-toggle:hover {
+    --stroke-0: var(--primary-dark-font);
+}
+.input-password-toggle .icon-eye-hide {
+    display: none;
+}
+.input-password-toggle.is-visible .icon-eye-show {
+    display: none;
+}
+.input-password-toggle.is-visible .icon-eye-hide {
+    display: block;
+}
+/* ====== Textarea ====== */
+.input-wrap.input-textarea .input-field {
+    height: 108px;
+    resize: none;
+    overflow: auto;
+}
+.input-wrap.input-textarea .input-label {
+    top: 17px;
+    transform: none;
+    transition: top 0.15s ease, font-size 0.15s ease, line-height 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+.input-wrap.input-textarea .input-field:focus ~ .input-label,
+.input-wrap.input-textarea .input-field:not(:placeholder-shown) ~ .input-label {
+    top: 0;
+    transform: translateY(-50%);
+}
+
+/* ====== Phone Input ====== */
+.input-wrap.input-phone {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-stroke-inactive);
+    border-radius: 8px;
+    background: #fff;
+    padding: 0;
+    transition: border-color 0.2s ease;
+    --phone-prefix-w: 16px;
+}
+.input-wrap.input-phone:hover {
+    border-color: var(--input-stroke-active);
+}
+.input-wrap.input-phone:focus-within {
+    border-color: var(--primary-dark-font);
+}
+.input-wrap.input-phone.input-error {
+    border-color: var(--error-color);
+}
+.input-wrap.input-phone .input-field {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    border-radius: 0;
+    padding: 17px 20px 17px 16px;
+    background: transparent;
+    height: 58px;
+}
+.input-wrap.input-phone .input-label {
+    left: var(--phone-prefix-w);
+    transition: top 0.15s ease, left 0.15s ease, font-size 0.15s ease, line-height 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+.input-wrap.input-phone .input-field:focus ~ .input-label,
+.input-wrap.input-phone .input-field:not(:placeholder-shown) ~ .input-label {
+    left: 15px;
+}
+.input-wrap.input-phone.input-error .input-field:focus ~ .input-label,
+.input-wrap.input-phone.input-error .input-field:not(:placeholder-shown) ~ .input-label {
+    color: var(--error-color);
+}
+/* prefix hidden by default — shown only after country detection */
+.phone-prefix {
+    display: none;
+    align-items: center;
+    gap: 16px;
+    padding: 17px 0 17px 20px;
+    flex-shrink: 0;
+}
+.input-phone.phone-detected .phone-prefix {
+    display: flex;
+}
+/* once detected: label always stays floating (input may be empty after code strip) */
+.input-phone.phone-detected .input-label {
+    top: 0;
+    left: 15px;
+    transform: translateY(-50%);
+    background: #fff;
+    font-family: Figtree, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--gray-600);
+}
+.phone-country {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.phone-flag {
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    display: inline-block;
+    pointer-events: none;
+}
+.phone-dial {
+    font-family: Figtree, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--primary-dark-font);
+    white-space: nowrap;
+    pointer-events: none;
+}
+.phone-select {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.phone-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--gray-600);
+    flex-shrink: 0;
+}
+
+/* password dots: larger size + spacing */
+.input-wrap.input-password .input-field[type="password"] {
+    font-size: 24px;
+    letter-spacing: 10px;
+    line-height: 24px;
+}

@@ -1,0 +1,22 @@
+/* ================================================
+   Base Components — Shared Design Tokens
+   Used as a dependency by all bc-* stylesheets.
+   Loaded automatically when any bc-* style is enqueued.
+   ================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --primary-blue: #3978F2;
+    --primary-beige: #FAF4E7;
+    --primary-dark-font: #2D4059;
+    --blue-200: #5897FB;
+    --disable-button: #B4BAC1;
+    --input-stroke-inactive: #EAECEE;
+    --input-stroke-active: #CCCCCC;
+    --gray-600: #848C97;
+    --gray-300: #EAECEE;
+    --error-color: #F53838;
+}
