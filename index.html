@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="base-components/variables.css">
+    <link rel="stylesheet" href="base-components/btn-main/btn-main.css">
+    <link rel="stylesheet" href="base-components/btn-provider/btn-provider.css">
+    <link rel="stylesheet" href="base-components/checkbox/checkbox.css">
+    <link rel="stylesheet" href="base-components/input/input.css">
+    <link rel="stylesheet" href="base-components/search/search.css">
 </head>
 <body>
     <div class="container">
@@ -391,9 +396,8 @@
             //default
             <div class="input-wrap input-search">
                 <button type="button" class="search-submit" aria-label="Search">
-                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37143 6.87543C1.37143 3.83565 3.83565 1.37143 6.87542 1.37143C9.9152 1.37143 12.3794 3.83566 12.3794 6.87543C12.3794 9.9152 9.9152 12.3794 6.87542 12.3794C3.83565 12.3794 1.37143 9.91521 1.37143 6.87543ZM6.87542 0C3.07822 0 0 3.07824 0 6.87543C0 10.6726 3.07822 13.7509 6.87542 13.7509C8.52706 13.7509 10.0427 13.1685 11.2281 12.1979L14.8294 15.7992C15.0972 16.0669 15.5314 16.0669 15.7992 15.7992C16.067 15.5314 16.067 15.0972 15.7992 14.8294L12.1979 11.2281C13.1685 10.0427 13.7509 8.52707 13.7509 6.87543C13.7509 3.07823 10.6726 0 6.87542 0Z" fill="#475569"/>
                     </svg>
                 </button>
                 <input type="search" class="input-field" placeholder="Search" />
@@ -407,9 +411,8 @@
             //has value (add .has-value to see clear button)
             <div class="input-wrap input-search has-value">
                 <button type="button" class="search-submit" aria-label="Search">
-                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.37143 6.87543C1.37143 3.83565 3.83565 1.37143 6.87542 1.37143C9.9152 1.37143 12.3794 3.83566 12.3794 6.87543C12.3794 9.9152 9.9152 12.3794 6.87542 12.3794C3.83565 12.3794 1.37143 9.91521 1.37143 6.87543ZM6.87542 0C3.07822 0 0 3.07824 0 6.87543C0 10.6726 3.07822 13.7509 6.87542 13.7509C8.52706 13.7509 10.0427 13.1685 11.2281 12.1979L14.8294 15.7992C15.0972 16.0669 15.5314 16.0669 15.7992 15.7992C16.067 15.5314 16.067 15.0972 15.7992 14.8294L12.1979 11.2281C13.1685 10.0427 13.7509 8.52707 13.7509 6.87543C13.7509 3.07823 10.6726 0 6.87542 0Z" fill="#475569"/>
                     </svg>
                 </button>
                 <input type="search" class="input-field" placeholder="Search" value="warmy.app" />
@@ -495,3 +498,4 @@
     <script src="js/validation.js"></script>
 </body>
 </html>
+
