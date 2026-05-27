@@ -62,7 +62,7 @@
 }
 /* focus ring via keyboard */
 .checkbox-input:focus-visible + .checkbox-box {
-    outline: 3px solid #030712;
+    outline: 1px solid #030712;
     outline-offset: 2px;
 }
 /* disabled — override all bg/border */

@@ -88,8 +88,8 @@
     color: var(--primary-dark-font);
 }
 .search-clear svg {
-    width: 16px;
-    height: 16px;
+    width: 12.5px;
+    height: 12.5px;
     display: block;
 }
 /* show clear when input has a value */
